@@ -4,6 +4,7 @@
 A, B = map(int, input().split())
 ## 1行にN個の文字（リスト化して入力）
 num_ls = list(input().split())
+num_ls = list(map(int, input().split()))
 ## 1行に文字と列が混同している場合
 N = int(input())
 list = []

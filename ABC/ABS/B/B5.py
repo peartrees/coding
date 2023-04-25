@@ -1,17 +1,12 @@
-A = int(input())
-B = int(input())
-C = int(input())
-X = int(input())
+N = int(input())
+D = [int(input()) for _ in range(N)]
 
-cnt = 0
+D_sort = sorted(D, reverse=True)
+cnt = 1
 
-for i in range(A+1):
-    num_500 = i
-    for j in range(B+1):
-        num_100 = j
-        for k in range(C+1):
-            num_50 = k
-            ALL = (500*num_500 + 100*num_100 + 50*num_50)
-            if (ALL == X):
-                cnt+=1
+for i in range(1, N):
+    if (D_sort[i-1] > D_sort[i]):
+        cnt+=1
+
 print(cnt)
+    
